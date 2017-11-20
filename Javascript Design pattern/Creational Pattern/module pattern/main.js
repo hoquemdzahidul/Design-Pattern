@@ -8,13 +8,16 @@ https://stackoverflow.com/questions/19059580/client-on-node-uncaught-referenceer
   */
 
  var Task = require('./script' );
+ var Repo = require('./taskRepository');
+
+var task1 = new Task(Repo.get(1));
+
+var task2 = new Task({name :"Create a demo for modulae!"});
+var task3 = new Task( {name :"Create a demo for singleton!"});
+var task4 = new Task( {name :"Create a demo for prototype!"});
 
 
-
-
-var task1 = new Task("Create a demo for constructor!");
-var task2 = new Task("Create a demo for modulae!");
-var task3 = new Task("Create a demo for singleton!");
-var task4 = new Task("Create a demo for prototype!");
 task1.save();
 task2.save();
+task3.save();
+task4.save();
